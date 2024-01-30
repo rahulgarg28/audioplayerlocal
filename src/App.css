@@ -1,0 +1,29 @@
+.music{
+  width: 500px;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: rgb(243, 214, 176);
+  align-items: center;
+  padding: 100px 50px;
+  border-radius: 40px;
+  margin-top: 100px;
+  .m2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    .list{
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      cursor: pointer;  
+      list-style: none;
+      padding: 20px 40px;
+      border: 4px solid white;
+      width: 350px;
+
+    }
+  }
+}
