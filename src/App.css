@@ -14,16 +14,47 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    .list{
+    .playlist{
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      margin: 10px;
-      cursor: pointer;  
-      list-style: none;
-      padding: 20px 40px;
-      border: 4px solid white;
-      width: 350px;
-
+      align-items: center;
+      >h2{
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+      }
+      .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        cursor: pointer;  
+        list-style: none;
+        padding: 20px 40px;
+        border: 4px solid white;
+        width: 350px;
+      }
+    }
+    .now-playing{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      >h2{
+        color: white;
+        font-weight: 700;
+        font-size: 40px;
+      }
+      .list{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        cursor: pointer;  
+        list-style: none;
+        padding: 20px 40px;
+        border: 4px solid white;
+        width: 350px;
+      }
     }
   }
 }
