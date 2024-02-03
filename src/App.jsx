@@ -7,7 +7,9 @@ const Playlist = ({ playlist, playTrack }) => {
       <h2>Playlist</h2>
       <ul>
         {playlist.map((track, index) => (
+          
           <li className='list' key={index} onClick={() => playTrack(index)}>
+            
             {track.name || `Track ${index + 1}`}
           </li>
         ))}
@@ -60,6 +62,7 @@ const App = () => {
   }, [currentTrackIndex, audioRef, playlist]);
 
   const handleFileChange = (e) => {
+    console.log(e);
     const newFiles = Array.from(e.target.files);
     setPlaylist(prevPlaylist => [...prevPlaylist, ...newFiles]); // Merge new files with existing playlist
     if (currentTrackIndex === null) {
@@ -84,15 +87,18 @@ const App = () => {
   };
 
   return (
+    <div className="con">
     <div className='music'>
       <div className="m2">
         <input className='input_file' type="file" accept="audio/*" onChange={handleFileChange} multiple />
         <audio ref={(element) => setAudioRef(element)} onEnded={skipTrack} controls />
-        <Playlist playlist={playlist} playTrack={playTrack} />
         {currentTrackIndex !== null && (
           <NowPlaying trackName={playlist[currentTrackIndex]?.name || 'No track playing'} />
         )}
+        <Playlist playlist={playlist} playTrack={playTrack} />
+       
       </div>
+    </div>
     </div>
   );
 };
