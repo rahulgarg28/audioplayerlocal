@@ -1,5 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  
+}
+.con{
+  
+
 .music{
-  width: 500px;
+  width: 400px;
   min-width: 200px;
   display: flex;
   justify-content: center;
@@ -54,6 +62,76 @@
         padding: 20px 40px;
         border: 4px solid white;
         width: 350px;
+      }
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 400px) 
+{
+  
+  .music{
+    width: 300px;
+    min-width: none;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: rgb(243, 214, 176);
+    align-items: center;
+    padding: 100px 50px;
+    border-radius: 40px;
+    margin-top: 100px;
+    .m2{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      .playlist{
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >h2{
+          
+          color: white;
+          font-weight: 700;
+          font-size: 40px;
+        }
+        .list{
+          max-width: 250px;
+          display: flex;
+          justify-content: center;
+          margin: 10px;
+          cursor: pointer;  
+          list-style: none;
+          padding: 20px 40px;
+          border: 4px solid white;
+          width: 350px;
+        }
+      }
+      .now-playing{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >h2{
+          color: white;
+          font-weight: 700;
+          font-size: 40px;
+        }
+        .list{
+          max-width: 250px;
+          display: flex;
+          justify-content: center;
+          margin: 10px;
+          cursor: pointer;  
+          list-style: none;
+          padding: 20px 40px;
+          border: 4px solid white;
+          width: 350px;
+        }
       }
     }
   }
